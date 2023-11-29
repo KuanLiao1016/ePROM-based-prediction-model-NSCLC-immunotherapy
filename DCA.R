@@ -184,12 +184,12 @@ lines(dca_symc$net.benefit$threshold,
       col = 6)
 legend("topright",
        c(
-         "Treat None",
-         "Non-ePROM model",
-         "EQ-5D model",
-         "Symptom burden model",
-         "Moderate-to-severe symptom model",
-         "Treat All"
+         "Providing different care to everyone",
+         "Clinical factor-only model",
+         "Quality of life model",
+         "Overall symptom score model",
+         "Number of moderate-to-severe symptoms model",
+         "Usual care"
        ),
        lty = c(4, 5, 5, 5, 5, 4), 
        lwd = 3, 
@@ -275,7 +275,7 @@ dca_eq5d_app <- stdca(
 dca_smooth_eq_app <- smooth(dca_eq5d_app$net.benefit$pred1_eq
                         [!is.na(dca_eq5d_app$net.benefit$pred1_eq)],
                         twiceit = TRUE)
-dca_smooth_eq_app <- c(dca_smooth_eq, 
+dca_smooth_eq_app <- c(dca_smooth_eq_app, 
                    rep(NA, sum(is.na(dca_eq5d_app$net.benefit$pred1_eq))))
 
 dca_symb_app <- stdca(
@@ -291,7 +291,7 @@ dca_symb_app <- stdca(
 dca_smooth_symb_app <- smooth(dca_symb_app$net.benefit$pred1_symb
                           [!is.na(dca_symb_app$net.benefit$pred1_symb)],
                           twiceit = TRUE)
-dca_smooth_symb_app <- c(dca_smooth_symb, 
+dca_smooth_symb_app <- c(dca_smooth_symb_app, 
                      rep(NA, sum(is.na(dca_symb_app$net.benefit$pred1_symb))))
 
 dca_symc_app <- stdca(
@@ -307,7 +307,7 @@ dca_symc_app <- stdca(
 dca_smooth_symc_app <- smooth(dca_symc_app$net.benefit$pred1_symc
                           [!is.na(dca_symc_app$net.benefit$pred1_symc)],
                           twiceit = TRUE)
-dca_smooth_symc_app <- c(dca_smooth_symc, 
+dca_smooth_symc_app <- c(dca_smooth_symc_app, 
                      rep(NA, sum(is.na(dca_symc_app$net.benefit$pred1_symc))))
 
 
@@ -358,12 +358,12 @@ lines(dca_symc_app$net.benefit$threshold,
       col = 6)
 legend("topright",
        c(
-         "Treat None",
-         "Non-ePROM model",
-         "EQ-5D model",
-         "Symptom burden model",
-         "Moderate-to-severe symptom model",
-         "Treat All"
+         "Providing differnet care to everyone",
+         "Clinical factor-only model",
+         "Quality of life model",
+         "Overall symptom score model",
+         "Number of moderate-to-severe symptoms model",
+         "Usual care"
        ),
        lty = c(4, 5, 5, 5, 5, 4), 
        lwd = 3, 
