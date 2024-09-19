@@ -1,6 +1,6 @@
 # ePROM-based-prediction-model-NSCLC-immunotherapy
 
-R code repository for the manuscript "Development, internal validation and clinical utility of electronic patient-reported outcome measures-based prognostic prediction models to predict overall survival in people with advanced non-small cell lung cancer receiving immunotherapy“.
+R code repository for the manuscript "Development, validation and clinical utility of electronic patient-reported outcome measures-enhanced prediction models for overall survival in people with advanced NSCLC receiving immunotherapy“.
 
 The study protocol can be found at: https://osf.io/54bzr/
 
